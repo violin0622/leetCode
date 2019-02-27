@@ -25,7 +25,7 @@ func dfs(results *[][]int, target int, combo []int, list []int){
     }
     for index, num := range list{
         if index>0 && list[index-1] == num{
-            continue
+            continue 
         }
         dfs(results, target-num, append(combo,num), list[index+1:])
     }
